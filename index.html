@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MrYum Cafe — Landing</title>
+  <title>MrYum Cafe</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Top Announcement Bar -->
   <div class="announcement" role="status" aria-live="polite">
     <div class="container">
-      <p>Free citywide delivery — All prices in USD.</p>
+      <p>Free citywide delivery</p>
     </div>
   </div>
 
@@ -23,7 +23,7 @@
       </button>
 
       <a href="#" class="brand" aria-label="MrYum Cafe Home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img src="logo.png" alt="" class="brand-mark" aria-hidden="true">
         <span class="brand-text">MrYum Cafe</span>
       </a>
 
@@ -114,7 +114,7 @@
     <div id="cart-list" class="cart-list" hidden>
       <ul id="cart-items" class="cart-items" aria-label="Cart items list"></ul>
       <div class="cart-summary">
-        <div class="row"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+        <div class="row"><span>Subtotal</span><strong id="cart-subtotal">PKR Rs 0</strong></div>
         <button class="btn btn-block">Checkout</button>
       </div>
     </div>
@@ -131,7 +131,9 @@
           <button class="btn" data-scroll="#categories">View Menu</button>
         </div>
         <div class="hero-media" aria-hidden="true">
-          <div class="ph ph-16x9" data-label="Lifestyle / Cafe Image"></div>
+          <figure class="media-frame ar-16x9">
+            <img src="logo.png" class="cover" alt="Cozy cafe interior with coffee and pastries" />
+          </figure>
         </div>
       </div>
     </section>
@@ -160,35 +162,35 @@
         <div class="cats-main">
           <div class="tiles">
             <a href="#" class="tile">
-              <div class="ph ph-4x3" data-label="Coffee"></div>
+              <figure class="media-frame ar-4x3"><img src="tile-coffee.jpg" class="cover" alt="Coffee"/></figure>
               <div class="tile-overlay">
                 <span class="tile-title">Coffee</span>
                 <span class="tile-cta">Explore</span>
               </div>
             </a>
             <a href="#" class="tile">
-              <div class="ph ph-4x3" data-label="Bakery"></div>
+              <figure class="media-frame ar-4x3"><img src="tile-bakery.jpg" class="cover" alt="Bakery"/></figure>
               <div class="tile-overlay">
                 <span class="tile-title">Bakery</span>
                 <span class="tile-cta">Explore</span>
               </div>
             </a>
             <a href="#" class="tile">
-              <div class="ph ph-4x3" data-label="Seasonal"></div>
+              <figure class="media-frame ar-4x3"><img src="tile-seasonal.jpg" class="cover" alt="Seasonal"/></figure>
               <div class="tile-overlay">
                 <span class="tile-title">Seasonal</span>
                 <span class="tile-cta">Explore</span>
               </div>
             </a>
             <a href="#" class="tile">
-              <div class="ph ph-4x3" data-label="Gifts"></div>
+              <figure class="media-frame ar-4x3"><img src="tile-gifts.jpg" class="cover" alt="Gifts"/></figure>
               <div class="tile-overlay">
                 <span class="tile-title">Gifts</span>
                 <span class="tile-cta">Explore</span>
               </div>
             </a>
             <a href="#" class="tile">
-              <div class="ph ph-4x3" data-label="Our Menu"></div>
+              <figure class="media-frame ar-4x3"><img src="tile-menu.jpg" class="cover" alt="Our Menu"/></figure>
               <div class="tile-overlay">
                 <span class="tile-title">Our Menu</span>
                 <span class="tile-cta">Explore</span>
@@ -213,10 +215,10 @@
             <h3 class="panel-title">Price</h3>
             <div class="price-snapshot" role="group" aria-label="Price ranges">
               <button class="chip selected">All</button>
-              <button class="chip">$0–$20</button>
-              <button class="chip">$20–$50</button>
-              <button class="chip">$50–$100</button>
-              <button class="chip">$100+</button>
+              <button class="chip">0rs – 500rs</button>
+              <button class="chip">500rs–1000rs</button>
+              <button class="chip">1000rs–1500rs</button>
+              <button class="chip">1500rs+</button>
             </div>
           </div>
         </aside>
@@ -240,34 +242,34 @@
         <div class="carousel" id="featured-carousel">
           <div class="track" id="feat-track" aria-live="polite">
             <!-- Cards -->
-            <article class="card" data-id="espresso250" data-name="Espresso Blend 250g" data-price="16.00">
-              <div class="ph ph-4x3" aria-hidden="true" data-label="Espresso Blend 250g"></div>
+            <article class="card" data-img="prod-espresso-250g.jpg" data-id="espresso250" data-name="Espresso Blend 250g" data-price="1600">
+              <figure class="media-frame ar-4x3"><img src="prod-espresso-250g.jpg" class="cover" alt="Espresso Blend 250g" /></figure>
               <h3 class="card-title">Espresso Blend 250g</h3>
-              <div class="price">$16.00</div>
+              <div class="price">PKR Rs 1,600</div>
               <button class="btn add-btn">Add to Cart</button>
             </article>
-            <article class="card" data-id="almondBox" data-name="Almond Croissant Box" data-price="22.00">
-              <div class="ph ph-4x3" aria-hidden="true" data-label="Almond Croissant Box"></div>
+            <article class="card" data-img="prod-espresso-250g.jpg" data-id="almondBox" data-name="Almond Croissant Box" data-price="2200">
+              <figure class="media-frame ar-4x3"><img src="prod-almond-croissant-box.jpg" class="cover" alt="Almond Croissant Box" /></figure>
               <h3 class="card-title">Almond Croissant Box</h3>
-              <div class="price">$22.00</div>
+              <div class="price">PKR Rs 2,200</div>
               <button class="btn add-btn">Add to Cart</button>
             </article>
-            <article class="card" data-id="mryumMug" data-name="MrYum Mug" data-price="12.00">
-              <div class="ph ph-4x3" aria-hidden="true" data-label="MrYum Mug"></div>
+            <article class="card" data-img="prod-espresso-250g.jpg" data-id="mryumMug" data-name="MrYum Mug" data-price="1200">
+              <figure class="media-frame ar-4x3"><img src="prod-mryum-mug.jpg" class="cover" alt="MrYum Mug" /></figure>
               <h3 class="card-title">MrYum Mug</h3>
-              <div class="price">$12.00</div>
+              <div class="price">PKR Rs 1,200</div>
               <button class="btn add-btn">Add to Cart</button>
             </article>
-            <article class="card" data-id="coldbrewKit" data-name="Cold Brew Kit" data-price="45.00">
-              <div class="ph ph-4x3" aria-hidden="true" data-label="Cold Brew Kit"></div>
+            <article class="card" data-img="prod-espresso-250g.jpg" data-id="coldbrewKit" data-name="Cold Brew Kit" data-price="4500">
+              <figure class="media-frame ar-4x3"><img src="prod-cold-brew-kit.jpg" class="cover" alt="Cold Brew Kit" /></figure>
               <h3 class="card-title">Cold Brew Kit</h3>
-              <div class="price">$45.00</div>
+              <div class="price">PKR Rs 4,500</div>
               <button class="btn add-btn">Add to Cart</button>
             </article>
-            <article class="card" data-id="brownieDozen" data-name="Fudge Brownie Dozen" data-price="28.00">
-              <div class="ph ph-4x3" aria-hidden="true" data-label="Fudge Brownie Dozen"></div>
+            <article class="card" data-img="prod-espresso-250g.jpg" data-id="brownieDozen" data-name="Fudge Brownie Dozen" data-price="2800">
+              <figure class="media-frame ar-4x3"><img src="prod-brownie-dozen.jpg" class="cover" alt="Fudge Brownie Dozen" /></figure>
               <h3 class="card-title">Fudge Brownie Dozen</h3>
-              <div class="price">$28.00</div>
+              <div class="price">PKR Rs 2,800</div>
               <button class="btn add-btn">Add to Cart</button>
             </article>
           </div>
@@ -290,7 +292,7 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <a href="#" class="brand">
-          <span class="brand-mark" aria-hidden="true"></span>
+          <img src="logo.png" alt="" class="brand-mark" aria-hidden="true">
           <span class="brand-text">MrYum Cafe</span>
         </a>
         <p class="muted">Neighborhood roastery and bakery serving small-batch coffee, warm pastries, and good company.</p>
@@ -322,9 +324,9 @@
         <h4>Contact</h4>
         <ul class="foot-links">
           <li><a href="mailto:hello@mryumcafe.example">hello@mryumcafe.example</a></li>
-          <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
-          <li><span>123 Roast St, Brewtown, USA</span></li>
-          <li><span>Dispatch & Returns: 45 Beans Ave, Roast City, USA</span></li>
+          <li><a href="tel:+10000000000">+92 325 0318229</a></li>
+          <li><span>Central Park Housing Society</span></li>
+          <li><span>Lahore</span></li>
         </ul>
       </div>
     </div>

@@ -197,6 +197,8 @@ const cartEmpty = $('#cart-empty');
 const cartListWrap = $('#cart-list');
 const cartItemsEl = $('#cart-items');
 const cartSubtotalEl = $('#cart-subtotal');
+const CURRENCY_PREFIX = 'PKR Rs ';
+
 const addBtns = $$('.add-btn');
 const cart = new Map(); // id -> {id, name, price, qty}
 
@@ -221,10 +223,10 @@ function updateCartUI(){
       const li = document.createElement('li');
       li.className = 'cart-item';
       li.innerHTML = `
-        <div class="cart-thumb" aria-hidden="true">${it.name.split(' ').slice(0,2).join(' ')}</div>
+        <div class="cart-thumb" aria-hidden="true">${it.img ? `<img src="${it.img}" alt="${it.name}" class="cart-thumb-img"/>` : it.name.split(" ").slice(0,2).join(" ")}</div>
         <div>
           <div class="cart-title">${it.name}</div>
-          <div class="cart-meta">$${it.price.toFixed(2)}</div>
+          <div class="cart-meta">${CURRENCY_PREFIX + it.price.toLocaleString(undefined, {maximumFractionDigits:0})}</div>
         </div>
         <div class="stepper-wrap">
           <div class="stepper">
@@ -243,7 +245,7 @@ function updateCartUI(){
       });
       cartItemsEl.appendChild(li);
     }
-    cartSubtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    cartSubtotalEl.textContent = CURRENCY_PREFIX + subtotal.toLocaleString(undefined, {maximumFractionDigits:0});
   }
 }
 addBtns.forEach(btn=>{
@@ -252,7 +254,9 @@ addBtns.forEach(btn=>{
     const id = card.dataset.id;
     const name = card.dataset.name;
     const price = parseFloat(card.dataset.price);
-    if(!cart.has(id)) cart.set(id, {id, name, price, qty: 0});
+    const img = card.dataset.img || '';
+
+    if(!cart.has(id)) cart.set(id, {id, name, price, qty: 0, img});
     cart.get(id).qty++;
     updateCartUI();
   });
